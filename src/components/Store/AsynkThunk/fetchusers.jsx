@@ -11,3 +11,9 @@ export const postUsers = createAsyncThunk('users/postdata', async(para) => {
     let response = await axios.post(`http://localhost:400/users`, para)
     return response.data
 })
+
+
+export const deletUsers = createAsyncThunk('users/deletdata', async(para) => {
+    let response = await axios.delete(`http://localhost:400/users/${para.id}`)
+    return response.data
+})

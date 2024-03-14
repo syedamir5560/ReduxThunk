@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getUsers } from './Store/AsynkThunk/fetchusers'
+import { getUsers ,deletUsers} from './Store/AsynkThunk/fetchusers'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -12,7 +12,13 @@ function Alldata() {
 
   useEffect(() => {
     dispatch(getUsers())
-  }, [])
+  }, [dispatch])
+
+  let onClickDelet=(para)=>{
+    dispatch(deletUsers(para))
+    console.log(para)
+
+  }
 
   return (
     <>
@@ -21,7 +27,7 @@ function Alldata() {
     {
    typeof alldata.data !== null ? (typeof alldata.data === 'object' && alldata.data.map(ele => {
     let descrip = ele.description.slice(0, 60) + '.......'
-    return <Card key={ele.id} className='my-4' style={{ width: '18rem' }}>
+    return <Card key={ele.id} className='my-4 border border-4 border-info rounded-3' style={{ width: '18rem' }}>
       <Card.Img style={{ height: '160px' }} variant="top" src={ele.image} />
       <Card.Body>
         <Card.Title>{ele.name}</Card.Title>
@@ -31,7 +37,7 @@ function Alldata() {
         </Card.Text>
         <Button className='ms-2' variant="warning">Preview</Button>
         <Button className='ms-2' variant="info">Edit</Button>
-        <Button className='ms-2' variant="danger">Delete</Button>
+        <Button className='ms-2' variant="danger" onClick={onClickDelet}>Delete</Button>
       </Card.Body>
     </Card>
   })) : null

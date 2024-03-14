@@ -3,6 +3,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { useDispatch } from 'react-redux';
 import { postUsers } from './Store/AsynkThunk/fetchusers';
+import { useNavigate } from 'react-router-dom';
 
 function Createdata() {
 
@@ -22,10 +23,13 @@ function Createdata() {
             })
     }
 
+    let navigate = useNavigate()
+
     let onHandleSubmit=(e)=>{
             e.preventDefault()
             console.log(data)
             dispatch(postUsers(data))
+            navigate('/')
 
     }
 
