@@ -27,7 +27,7 @@ function Alldata() {
             <Card.Body>
               <Card.Title>{ele.name}</Card.Title>
               <h3>{ele.email}</h3>
-              <Card.Text> 
+              <Card.Text>
                 {descrip}
               </Card.Text>
               <Button className='ms-2' variant="warning">Preview</Button>
