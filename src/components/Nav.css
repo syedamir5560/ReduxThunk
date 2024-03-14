@@ -1,0 +1,16 @@
+a{
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: black;
+    
+}
+a.active{
+    color: rgb(156, 34, 34);
+    text-shadow: 1px 1px 3px black;
+    text-decoration: none;
+}
+img{
+    height: 40px;
+}
