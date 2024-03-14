@@ -8,7 +8,7 @@ import './Nav.css'
 function NavbarTop() {
     return (
         <div>
-            <Navbar bg="light" data-bs-theme="light">
+            <Navbar bg="dark" data-bs-theme="light" className=''>
                 <Container>
                     <Navbar.Brand href="#home">
                         <img src="https://cdn-icons-png.flaticon.com/128/272/272608.png" alt="" />

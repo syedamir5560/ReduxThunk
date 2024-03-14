@@ -1,36 +1,54 @@
 {
-    "users": [
-      {
-        "id": "1",
-        "name": "George BellBoy",
-        "email": "george32@test.com",
-        "password": "bellboy",
-        "description": "Because React-Bootstrap doesn't depend on a very precise version of Bootstrap, we don't ship with any included CSS. However, some stylesheet is required to use these components.",
-        "image": "https://images.unsplash.com/photo-1707149414369-5989e250c788?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8"
-      },
-      {
-        "id": "2",
-        "name": "Mason Mount",
-        "email": "masonm13@test.com",
-        "password": "mount",
-        "description": "We can't solve every use case, but in the spirit of create-react-app, we can try to provide some tools that abstract over the setup process and handle the most common use cases, as well as include some useful utilities that will let the user simplify their application code.Because of that, this package is deliberately limited in scope. It does not address concepts like , folder or file structures, managing entity relationships in the store, and so on.Redux Toolkit also includes a powerful data fetching and caching capability that we've dubbed . It's included in the package as a separate set of entry points. It's optional, but can eliminate the need to hand-write data fetching logic yourself.",
-        "image": "https://images.unsplash.com/photo-1707249662406-29ef3d2dd5db?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8"
-      },
-      {
-        "name": "JAY",
-        "password": "undertaker1",
-        "email": "prasun@gmail.com",
-        "description": "The campaigns of President Biden and former President Trump view this week, with Super Tuesday and the State of the Union, as a critical period.",
-        "image": "https://plus.unsplash.com/premium_photo-1709143100175-3c04ad69832a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8",
-        "id": "egj69qN"
-      },
-      {
-        "name": "Nikesh",
-        "password": "undertaker1",
-        "email": "prasun@gmail.com",
-        "description": "For years, Apple, Google, Meta and others operated unfettered. But new laws and regulations have finally compelled them to make major shifts.",
-        "image": "https://images.unsplash.com/photo-1682687221073-53ad74c2cad7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8",
-        "id": "mIR-2hm"
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": "1",
+      "name": "George BellBoy",
+      "email": "george32@test.com",
+      "password": "bellboy",
+      "description": "Because React-Bootstrap doesn't depend on a very precise version of Bootstrap, we don't ship with any included CSS. However, some stylesheet is required to use these components.",
+      "image": "https://images.unsplash.com/photo-1707149414369-5989e250c788?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8"
+    },
+    {
+      "id": "2",
+      "name": "Mason Mount",
+      "email": "masonm13@test.com",
+      "password": "mount",
+      "description": "We can't solve every use case, but in the spirit of create-react-app, we can try to provide some tools that abstract over the setup process and handle the most common use cases, as well as include some useful utilities that will let the user simplify their application code.Because of that, this package is deliberately limited in scope. It does not address concepts like , folder or file structures, managing entity relationships in the store, and so on.Redux Toolkit also includes a powerful data fetching and caching capability that we've dubbed . It's included in the package as a separate set of entry points. It's optional, but can eliminate the need to hand-write data fetching logic yourself.",
+      "image": "https://images.unsplash.com/photo-1707249662406-29ef3d2dd5db?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8"
+    },
+    {
+      "name": "JAY",
+      "password": "undertaker1",
+      "email": "prasun@gmail.com",
+      "description": "The campaigns of President Biden and former President Trump view this week, with Super Tuesday and the State of the Union, as a critical period.",
+      "image": "https://plus.unsplash.com/premium_photo-1709143100175-3c04ad69832a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8",
+      "id": "egj69qN"
+    },
+    {
+      "name": "Nikesh",
+      "password": "undertaker1",
+      "email": "prasun@gmail.com",
+      "description": "For years, Apple, Google, Meta and others operated unfettered. But new laws and regulations have finally compelled them to make major shifts.",
+      "image": "https://images.unsplash.com/photo-1682687221073-53ad74c2cad7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8",
+      "id": "mIR-2hm"
+    },
+    {
+      "id": "879c",
+      "name": [
+        "Sayyed Aamir Ali"
+      ],
+      "email": [
+        "pdyzlzj0z7@zipcatfish.com"
+      ],
+      "password": [
+        "vrhshasjc"
+      ],
+      "image": [
+        "https://feeds.abplive.com/onecms/images/uploaded-images/2024/03/14/b0caaaafcc5ce2b3baa731853cfd8d1b1710393740544775_original.jpg?impolicy=abp_cdn&imwidth=720"
+      ],
+      "description": [
+        "Renowned Bollywood icon Aamir Khan is known for his unique choice of projects and stellar performances. Amidst the success of 'Laapataa Ladies', a production by Aamir Khan Productions, hailed as the most positively reviewed film of the year, the actor-director-producer is currently engrossed in filming his upcoming release 'Sitaare Zameen Par'. Simultaneously, he's also dedicated to the production of 'Lahore 1947', a significant collaboration with Sunny Deol and Rajk"
+      ]
+    }
+  ]
+}

@@ -7,8 +7,7 @@ import Card from 'react-bootstrap/Card';
 function Alldata() {
 
   let alldata = useSelector((state) => state.usersdata)
-  console.log(alldata)
-
+  console.log(alldata.data)
   let dispatch = useDispatch()
 
   useEffect(() => {
@@ -16,29 +15,31 @@ function Alldata() {
   }, [])
 
   return (
-    <div>
-      <h1>All The Data</h1>
+    <>
+    <h2 className='text-center bg-info'>All The Data</h2>
+     <div className='d-flex justify-content-evenly my-4 align-items-center flex-row bg-warning rounded-3 flex-wrap'>
+    {
+   typeof alldata.data !== null ? (typeof alldata.data === 'object' && alldata.data.map(ele => {
+    let descrip = ele.description.slice(0, 60) + '.......'
+    return <Card key={ele.id} className='my-4' style={{ width: '18rem' }}>
+      <Card.Img style={{ height: '160px' }} variant="top" src={ele.image} />
+      <Card.Body>
+        <Card.Title>{ele.name}</Card.Title>
+        <h3>{ele.email}</h3>
+        <Card.Text>
+          {descrip}
+        </Card.Text>
+        <Button className='ms-2' variant="warning">Preview</Button>
+        <Button className='ms-2' variant="info">Edit</Button>
+        <Button className='ms-2' variant="danger">Delete</Button>
+      </Card.Body>
+    </Card>
+  })) : null
+    }
 
-      {
-        alldata.data && alldata.data.map(ele => {
-          let descrip = ele.description.slice(0, 60) + '.......'
-          return (<Card key={ele.id} className='my-4' style={{ width: '18rem' }}>
-            <Card.Img style={{ height: '150px' }} variant="top" src={ele.image} />
-            <Card.Body>
-              <Card.Title>{ele.name}</Card.Title>
-              <h3>{ele.email}</h3>
-              <Card.Text>
-                {descrip}
-              </Card.Text>
-              <Button className='ms-2' variant="warning">Preview</Button>
-              <Button className='ms-2' variant="info">Edit</Button>
-              <Button className='ms-2' variant="danger">Delete</Button>
-            </Card.Body>
-          </Card>)
-        })
-      }
-
-    </div>
+  </div>
+    </>
+   
   )
 }
 

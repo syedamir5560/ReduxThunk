@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { getUsers } from './AsynkThunk/fetchusers'
+import { getUsers, postUsers } from './AsynkThunk/fetchusers'
 
 
 
@@ -22,7 +22,24 @@ export const userSlice = createSlice({
       builder.addCase(getUsers.rejected, (state, action) => {
         state.isLoading = false
         state.error = action.error
-      })
+      }),
+
+      // http post request
+
+      builder.addCase(postUsers.pending, (state, action) => {
+        state.isLoading = true
+      }),
+  
+        builder.addCase(postUsers.fulfilled, (state, action) => {
+          state.isLoading = false
+       
+          // state.data=action.payload  
+        }),
+  
+        builder.addCase(postUsers.rejected, (state, action) => {
+          state.isLoading = false
+          state.error = action.error
+        })
   }
 
 
