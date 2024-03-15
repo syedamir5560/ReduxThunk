@@ -4,6 +4,7 @@ import './App.css'
 import NavbarTop from './components/NavbarTop'
 import Alldata from './components/Alldata'
 import Createdata from './components/Createdata'
+import Edit from './Edit'
 
 function App() {
   
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Alldata/>}/>
           <Route path='/createdata' element={<Createdata/>}/>
+          <Route path='/user/:id' element={<Edit/>}/>
         </Routes>
     </>
   )

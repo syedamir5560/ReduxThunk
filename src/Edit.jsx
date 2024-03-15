@@ -1,43 +1,29 @@
-import React, { useState } from 'react'
+import React from 'react'
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
-import { useDispatch } from 'react-redux';
-import { postUsers } from './Store/AsynkThunk/fetchusers';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
-function Createdata() {
+function Edit() {
 
-    let dispatch = useDispatch()
-
-    let [data , setdata] = useState({
+    let [data, setdata] = useState({
         name: "",
         email: "",
         password: "",
         image: "",
         description: ""
     })
-
+    
     let onHandleChange = (e) => {
         setdata({
             ...data, [e.target.name]: [e.target.value]
         })
     }
-
-    let navigate = useNavigate()
-
-    let onHandleSubmit = (e) => {
-        e.preventDefault()
-        console.log(data)
-        dispatch(postUsers(data))
-        navigate('/')
-    }
-
     return (
         <>
-            <h2 className='text-center mt-2'>Upload Data</h2>
+            <h2 className='text-center mt-2'>Edit Data</h2>
 
             <div className='border border-3 border-primary p-4'>
-                <form onSubmit={onHandleSubmit} >
+                <form  >
                     <Form.Control
                         name='name'
                         value={data.name}
@@ -77,8 +63,7 @@ function Createdata() {
                 </form>
             </div>
         </>
-
     )
 }
 
-export default Createdata
+export default Edit

@@ -1,8 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { getUsers, postUsers ,deletUsers} from './AsynkThunk/fetchusers'
-
-
-
+import { getUsers, postUsers, deleteUsers } from './AsynkThunk/fetchusers'
 
 export const userSlice = createSlice({
   name: 'users',
@@ -15,7 +12,6 @@ export const userSlice = createSlice({
 
       builder.addCase(getUsers.fulfilled, (state, action) => {
         state.isLoading = false
-
         state.data = action.payload
       }),
 
@@ -43,21 +39,22 @@ export const userSlice = createSlice({
 
       //delete req
 
-      builder.addCase(deletUsers.pending, (state, action) => {
+      builder.addCase(deleteUsers.pending, (state, action) => {
         state.isLoading = true
       }),
 
-      builder.addCase(deletUsers.fulfilled, (state, action) => {
+      builder.addCase(deleteUsers.fulfilled, (state, action) => {
         state.isLoading = false
         let { id } = action.payload //from that object target only its id
         if (id) {
-          state.data = state.data.filter(ele => ele.id != id)
+          state.data = state.data.filter(ele => ele.id !== id)
         }
+
 
         // state.data=action.payload  
       }),
 
-      builder.addCase(deletUsers.rejected, (state, action) => {
+      builder.addCase(deleteUsers.rejected, (state, action) => {
         state.isLoading = false
         state.error = action.error
       })
